@@ -121,6 +121,7 @@ nav ul li a:hover{
     width: 25%;
     float: right;
     margin-right: 33px;
+    margin-left: 10%;
 }
 
 .link{
@@ -207,3 +208,25 @@ a{
     color: black;
 }
 
+
+/* Media Query for responsiveness */
+
+@media only screen and (max-width: 1010px) {
+    .intro{
+        width: 95%;
+    }
+    .skill-row{
+        width: 90%;
+        align-items: center;
+        text-align: left;
+        margin-top: 3%;
+    }
+  }
+
+  @media only screen and (max-width: 473px) {
+        .avatar{
+            border-radius: 50%;
+            width: 25%;
+            height: 25%;
+        }
+  }

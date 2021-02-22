@@ -28,7 +28,7 @@ body {
     max-width: 1500px;
 }
 p.overview {
-    font-size: 14px;
+    font-size: 16px;
     height: 200px;
     width: 100%;
     overflow: hidden;
@@ -46,7 +46,7 @@ p.overview {
     margin-bottom: 1rem;
     position: relative;
 }
-.heading:after {
+/* .heading:after {
     display: block;
     content: '';
     position: absolute;
@@ -54,7 +54,7 @@ p.overview {
     height: 4px;
     background: linear-gradient(135deg, #1a9be6, #1a57e6);
     bottom: 0;
-}
+} */
 .description {
     width: 100%;
     margin-top: 0;
@@ -207,7 +207,28 @@ p.overview {
 }
 .title {
     font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: underline;
 }
 .release_date {
     font-weight: normal;
+}
+
+.text-block {
+  position: absolute;
+  top: 0;
+  right: -15%;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainhead{
+    text-align: center;
 }

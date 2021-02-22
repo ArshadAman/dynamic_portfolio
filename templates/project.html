@@ -18,12 +18,16 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="heading">My Top Project</h1>
+      <div class="mainhead">
+      <h1 class="heading">My Top Projects</h1>
       <p class="description">These are projects, I made till now.</p>
-              {% for project in projects %}
+    </div>
+          {% for project in projects %}
       <div class="card" >
         <div class="front" style="background-image: url('{{project.img_url}}');">
-            <p class="large">{{project.tech}}</p>
+        </div>
+        <div class="text-block container">
+          <h4>{{project.pname}}</h4>
         </div>
         <div class="back">
           <div>
