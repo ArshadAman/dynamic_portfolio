@@ -20,9 +20,9 @@ def load_user(user_id):
     return Users.query.get(int(user_id))
 
 
-# MY_GMAIl_DETAILS
-MY_GMAIl_ID = "mearshadaman@gmail.com" 
-MY_GMAIl_PASSOWRD = "ek baar baap bol" 
+# MY_GMAIl_DETAILS (Please use your email address and password, for security extract details from environment variables)
+MY_GMAIl_ID = "email@gmail.com" 
+MY_GMAIl_PASSOWRD = "password" 
 
 #Making User Table
 class Users(UserMixin, db.Model):
