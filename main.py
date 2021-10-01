@@ -1,3 +1,4 @@
+#importing main modules
 from flask import Flask, render_template, redirect, url_for, request, flash
 import smtplib
 from flask_sqlalchemy import SQLAlchemy
@@ -5,13 +6,14 @@ from flask_login import UserMixin, login_manager, login_user, LoginManager, logi
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
 
+#initialisation
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "sqlite:///portfolio.db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-
+#initialising the login manager
 login_manager = LoginManager()
 login_manager.init_app(app)
 
@@ -55,14 +57,13 @@ def contact():
         email = request.form["email"]
         phone = request.form["phone"]
         message = request.form["msg"]
-
         with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
             connection.starttls()
             connection.login(MY_GMAIl_ID, MY_GMAIl_PASSOWRD)
             connection.sendmail(from_addr=MY_GMAIl_ID, to_addrs="arshadaman202@gmail.com", msg=f"Subject:Mail from {name}!\n\nEmail:{email}\nPhone:{phone}\nHere is message: {message}")
         return f'<h1 style="text-align:center;">Thank You for your message. I will reach back to you ASAP</h1>'
 
-    return render_template("contact.html")
+    return render_template("contact.html") #returning the template
 
 
 @app.route("/project", methods=["GET","POST"])
