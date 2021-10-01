@@ -1,23 +1,40 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
+:root{
+    --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+    --inner-shadow-0: inset 3px 3px 3px #067c1f, inset -3px -3px 3px #068b23;
+    --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+}
 html {
     font-size: 18px;
     line-height: 1.5;
     font-weight: 300;
-    color: whitesmoke;
+    color: rgb(46, 44, 44);
     font-family: "Nunito Sans", sans-serif;
 }
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-color:#323232;
-    color: whitesmoke;
+    background-color:#e6e1e1;
+    color: rgb(46, 44, 44);
     background-attachment: fixed;
+    transition: all 0.5s ease;
 }
 .large {
     font-size: 3rem;
+}
+.container{
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: var(--outer-shadow);
+    transition: all 0.5s ease;
+}
+.container:hover{
+    box-shadow: var(--inner-shadow);
 }
 .content {
     display: flex;
@@ -26,6 +43,9 @@ body {
     align-items: center;
     flex-wrap: wrap;
     max-width: 1500px;
+}
+.form-group{
+    margin-top: 15px;
 }
 p.overview {
     font-size: 16px;
@@ -139,6 +159,9 @@ p.overview {
 .card:nth-child(even):hover .back {
     transform: rotateY(0deg);
 }
+.btn-success:hover{
+    box-shadow: var(--inner-shadow-0);
+}
 .button {
     transform: translateZ(40px);
     cursor: pointer;
@@ -197,6 +220,7 @@ p.overview {
 .container.add {
    margin-top: 40px;
    margin-bottom: 20px;
+   transition: all 0.5s ease;
 }
 
 .review {
