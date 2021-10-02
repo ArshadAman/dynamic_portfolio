@@ -66,15 +66,7 @@ p.overview {
     margin-bottom: 1rem;
     position: relative;
 }
-/* .heading:after {
-    display: block;
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(135deg, #1a9be6, #1a57e6);
-    bottom: 0;
-} */
+
 .description {
     width: 100%;
     margin-top: 0;
@@ -255,4 +247,8 @@ p.overview {
 
 .mainhead{
     text-align: center;
+}
+
+a:hover {
+    text-decoration: none;
 }
