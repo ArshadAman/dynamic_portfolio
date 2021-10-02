@@ -5,7 +5,7 @@
 }
 
 body{
-    margin: 0;
+    margin: 1px;
     text-align: center;
     font-family:'Merriweather', serif;
     color: #40514E;
@@ -79,7 +79,7 @@ nav ul li a{
     color: #faf3e0;
 }
 nav ul li a:hover{
-    text-decoration: underline;
+    text-decoration: none;
     text-decoration: #b68973;
     color: #eabf9f;
 }
@@ -101,7 +101,7 @@ nav ul li a:hover{
 }
 .avatar{
     border-radius: 50%;
-    width: 15%;
+    width: 17%;
     height: 15%;
 }
 
@@ -227,6 +227,6 @@ a{
         .avatar{
             border-radius: 50%;
             width: 25%;
-            height: 25%;
+            height: 27%;
         }
   }
