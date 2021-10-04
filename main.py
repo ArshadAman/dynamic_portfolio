@@ -1,9 +1,9 @@
 #importing main modules
 from flask import Flask, render_template, redirect, url_for, request, flash
-import smtplib
+import smtplib #for sending mail
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_manager, login_user, LoginManager, login_required, current_user, logout_user
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash #for generating secure password hash
 import os
 
 #initialisation
